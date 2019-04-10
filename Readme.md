@@ -9,8 +9,23 @@ I just don't want to invest the time into learning another logging framework.
 Removes the vars functionality, fixes not being able to use '{}'.
 Puts in place some sane default shortcuts.
 
-If we don't want data use `debug0 "msg"`, if we do want data `debug "msg" data`
-If we want multiple datas: `debug "msg" (onedata, twodata)`.
+If we don't want data use:
+
+```haskell
+debug0 "msg"
+```
+
+if we do want data
+
+```haskell
+debug "msg" data
+```
+
+If we want multiple datas:
+
+```haskell
+debug "msg" (onedata, twodata)`
+```
 
 I usually import this module qualified as Log,
 then you can do:
