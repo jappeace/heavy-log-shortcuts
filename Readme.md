@@ -15,7 +15,7 @@ If we don't want data use:
 debug0 "msg"
 ```
 
-if we do want data
+if we do want data (which is almost always the case):
 
 ```haskell
 debug "msg" somedata
@@ -34,4 +34,4 @@ then you can do:
 Log.debug "oh no my house is on fire" house
 ```
 
-and everything is alright but more importantly it reads like a sentence.
+Now it reads almost like a sentence.
