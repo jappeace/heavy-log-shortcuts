@@ -1,4 +1,4 @@
-name:                template
+name:                heavy-log-shortcuts
 version:             1.0.0
 github:              "jappeace/template"
 license:             MIT
@@ -47,17 +47,12 @@ default-extensions:
 
 dependencies:
 - base >= 4.7 && < 5
+- heavy-logger >= 0.3.1.0 && < 0.4
+- monad-control
+- text
+- text-format-heavy
+- fast-logger
 
 library:
   source-dirs: src
 
-executables:
-  exe:
-    main:                exe.hs
-    source-dirs:         app
-    dependencies:
-    - template
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N

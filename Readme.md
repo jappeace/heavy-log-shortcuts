@@ -1,18 +1,17 @@
-# Haskell project template
+# Heavy log shortcuts
 
-Use cabal within a nix shell.
+An alternative shortcut api for heavy-logger.
+This has infected several of my projects already so I'm
+putting it online.
+Although, it maybe better to use someting like [katip](http://hackage.haskell.org/package/katip)
+I just don't want to invest the time into learning another logging framework.
 
-similar to: https://github.com/monadfix/nix-cabal
-except I use a makefile and a seperate filewatch script.
+Removes the vars functionality, fixes not being able to use '{}'.
+Puts in place some sane default shortcuts.
 
-Comes with:
-+ a poor mans' file watch.
-+ a nix shell.
-+ A couple of handy make commands.
-+ Starting haskell files
+If we don't want data use debug0 "msg, if we do want data `debug "msg" data`
+If we want multiple datas: `debug "msg" (onedata, twodata)`.
 
-
-## TODO
-
-+ build tools as input of the nix shell (Nobody seems to do this, but it allows a pure shell, and reducing the change of works on my machine)
-+ Move towards steel overseer for platform independence
+I useually import this module qualified as Log,
+then you can do `Log.debug "oh no my house is on fire" house`,
+and it reads like a sentence.
