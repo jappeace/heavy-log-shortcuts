@@ -24,7 +24,7 @@ debug "msg" somedata
 If we want multiple datas:
 
 ```haskell
-debug "msg" (onedata, twodata)`
+debug "msg" (onedata, twodata)
 ```
 
 I usually import this module qualified as Log,
