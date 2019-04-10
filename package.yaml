@@ -7,7 +7,7 @@ maintainer:          "jappieklooster@hotmail.com"
 copyright:           "2019 Jappie Klooster"
 category: System
 synopsis: Simle api for heavy logger
-description: An alternative shortcut api for heavy-logger, removes vars functionality and fixes `{}` bs.
+description: An alternative shortcut api for heavy-logger, removes vars functionality.
 
 extra-source-files:
 - Readme.md
