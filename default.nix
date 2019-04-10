@@ -11,5 +11,6 @@ mkDerivation {
   libraryToolDepends = [ hpack ];
   preConfigure = "hpack";
   homepage = "https://github.com/jappeace/template#readme";
+  description = "Simle api for heavy logger";
   license = stdenv.lib.licenses.mit;
 }

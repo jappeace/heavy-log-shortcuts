@@ -2,10 +2,13 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: d331d85cf2320a999a5d4d3f8f7905001193263928d80fd7830169a92d4a861b
+-- hash: f6acb842363a1331e91ceab087c3f0e29984cdc7bd83fa4947093b21202656af
 
 name:           heavy-log-shortcuts
 version:        1.0.0
+synopsis:       Simle api for heavy logger
+description:    An alternative shortcut api for heavy-logger, removes vars functionality and fixes `{}` bs.
+category:       System
 homepage:       https://github.com/jappeace/template#readme
 bug-reports:    https://github.com/jappeace/template/issues
 author:         Jappie Klooster
