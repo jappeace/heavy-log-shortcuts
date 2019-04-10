@@ -18,7 +18,7 @@ debug0 "msg"
 if we do want data
 
 ```haskell
-debug "msg" data
+debug "msg" somedata
 ```
 
 If we want multiple datas:
