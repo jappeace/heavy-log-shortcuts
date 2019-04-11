@@ -4,8 +4,12 @@
 -- | Wraps the monad logger library
 --   Bunch of aliases for heavy logger, simpler api
 module System.Log.Heavy.Short
-  ( run
+  (
+  -- * LoggingT actions
+    run
   , discard
+  , lift
+  -- * Log stuff
   , info
   , debug
   , warn
@@ -15,7 +19,6 @@ module System.Log.Heavy.Short
   , warn0
   , error0
   , dump
-  , lift
   ) where
 
 import           Control.Monad.IO.Class
@@ -61,38 +64,30 @@ dump ::
   -> m ()
 dump d = debug0 $ showT d
 
--- | Log func with a variable
-type VarLog
-   = forall m a. (MonadIO m, HasLogging m, Show a) =>
-                   Text.Text -> a -> m ()
-
--- | Log func that just accepts text
-type SimpleLog
-   = forall m. (MonadIO m, HasLogging m) =>
-                 Text.Text -> m ()
-
-info :: VarLog
+-- | Log func with a variable (or tupple)
+info :: forall m a. (MonadIO m, HasLogging m, Show a) => Text.Text -> a -> m ()
 info d b = info0 $ d <> showT b
 
-info0 :: SimpleLog
+-- | Log func that just accepts text
+info0 :: forall m. (MonadIO m, HasLogging m) => Text.Text -> m ()
 info0 = monkeyPatch Logcut.info
 
-debug :: VarLog
+debug :: forall m a. (MonadIO m, HasLogging m, Show a) => Text.Text -> a -> m ()
 debug d b = debug0 $ d <> showT b
 
-debug0 :: SimpleLog
+debug0 :: forall m. (MonadIO m, HasLogging m) => Text.Text -> m ()
 debug0 = monkeyPatch Logcut.debug
 
-warn :: VarLog
+warn :: forall m a. (MonadIO m, HasLogging m, Show a) => Text.Text -> a -> m ()
 warn d b = warn0 $ d <> showT b
 
-warn0 :: SimpleLog
+warn0 :: forall m. (MonadIO m, HasLogging m) => Text.Text -> m ()
 warn0 = monkeyPatch Logcut.warning
 
-error :: VarLog
+error :: forall m a. (MonadIO m, HasLogging m, Show a) => Text.Text -> a -> m ()
 error d b = error0 $ d <> showT b
 
-error0 :: SimpleLog
+error0 :: forall m. (MonadIO m, HasLogging m) => Text.Text -> m ()
 error0 = monkeyPatch Logcut.reportError
 
 -- | Heavy logger will eat { and }, we replace them with < and >
