@@ -2,10 +2,10 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3b981391273a612ef21c6a06b2d58308ad147ebf75c032180f8f11df9ec51bb8
+-- hash: 8680ddc0570cd5483d66fd515e0c77e324c2956e9c0feba7ec11f14d5958f249
 
 name:           heavy-log-shortcuts
-version:        1.0.0
+version:        1.0.1
 synopsis:       Simle api for heavy logger
 description:    An alternative shortcut api for heavy-logger, removes vars functionality.
 category:       System
