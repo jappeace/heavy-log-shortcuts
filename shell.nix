@@ -13,6 +13,6 @@
  )
 }:
 let 
-    build = pkgs.haskellPackages.callPackage ./default.nix { };
+    build = pkgs.haskellPackages.callPackage ./heavy-log-shortcuts.nix { };
 in 
 build.env
