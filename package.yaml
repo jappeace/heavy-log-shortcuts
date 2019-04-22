@@ -50,7 +50,7 @@ default-extensions:
 
 dependencies:
 - base >= 4.7 && < 5
-- heavy-logger >= 0.3.1.0 && < 0.4
+- heavy-logger >= 0.3.1.0 && < 0.5
 - monad-control
 - text
 - text-format-heavy

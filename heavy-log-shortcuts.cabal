@@ -2,15 +2,15 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 8680ddc0570cd5483d66fd515e0c77e324c2956e9c0feba7ec11f14d5958f249
+-- hash: 036e344ba5a276d2cbfb1738d4ccacddf68c7168f6f6e0c498efa3889409eb54
 
 name:           heavy-log-shortcuts
 version:        1.0.1
-synopsis:       Simle api for heavy logger
+synopsis:       Simple api for heavy logger
 description:    An alternative shortcut api for heavy-logger, removes vars functionality.
 category:       System
-homepage:       https://github.com/jappeace/template#readme
-bug-reports:    https://github.com/jappeace/template/issues
+homepage:       https://github.com/jappeace/heavy-log-shortcuts#readme
+bug-reports:    https://github.com/jappeace/heavy-log-shortcuts/issues
 author:         Jappie Klooster
 maintainer:     jappieklooster@hotmail.com
 copyright:      2019 Jappie Klooster
@@ -24,7 +24,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/jappeace/template
+  location: https://github.com/jappeace/heavy-log-shortcuts
 
 library
   exposed-modules:
@@ -38,7 +38,7 @@ library
   build-depends:
       base >=4.7 && <5
     , fast-logger
-    , heavy-logger >=0.3.1.0 && <0.4
+    , heavy-logger >=0.3.1.0 && <0.5
     , monad-control
     , text
     , text-format-heavy
