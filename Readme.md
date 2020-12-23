@@ -1,3 +1,5 @@
+This is no longer maintained, because heavy logger appears unmaintained and I switched to template haskell based alternatives.
+
 # Heavy log shortcuts
 
 An alternative shortcut api for heavy-logger.
